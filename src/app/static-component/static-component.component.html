@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 style="text-align: center;">Input for static Sites within app</h1>
+<form autocomplete="off">
+  <ul style="list-style: none;">
+    <li>
+      <textArea  placeholder="How it works" (keyup)="howitworks=$any($event.target).value" name="" rows="5" cols="60" required>
+      </textArea>
+    </li>
+    <li>
+      <textArea placeholder="Contact" (keyup)="contact=$any($event.target).value" rows="5" cols="60" required>
+      </textArea>
+    </li>
+    <li>
+      <textArea placeholder="General terms and conditions" (keyup)="termAndCondition=$any($event.target).value" rows="5" cols="60" required>
+      </textArea>
+    </li>
+    <li>
+      <textArea placeholder="Imprint" (keyup)="imprint=$any($event.target).value" rows="5" cols="60" required>
+      </textArea>
+    </li>
+    <li>
+      <textArea placeholder="Data short explanation"(keyup)="explanation=$any($event.target).value" rows="5" cols="60" required>
+      </textArea>
+  <button style="position: absolute; margin-left: 20px;" (click)='sendData()' type="submit">Safe Change</button>
+    </li>
+  </ul>
+</form>
+</div>
