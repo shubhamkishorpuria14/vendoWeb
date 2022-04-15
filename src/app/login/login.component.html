@@ -5,19 +5,19 @@
 		<div class="login-form">
 			<div class="sign-in-htm">
 				<div class="group">
-					<label for="user" class="label">Username</label>
-					<input id="user" type="text" class="input">
+					<label for="user" class="label">Email</label>
+					<input id="user" pattern=".+@globex\.com" #Email type="email" class="input" required>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<input id="pass" #Password type="password" class="input" data-type="password" required>
 				</div>
 				<div class="group">
 					<input id="check" type="checkbox" class="check" checked>
 					<label for="check"><span class="icon"></span> Keep me Signed in</label>
 				</div>
 				<div class="group">
-					<input type="submit" class="button" value="Sign In" (click)='sendData()'>
+					<input type="submit" class="button" value="Sign In" (click)='signin(Email.value,Password.value)'>
 				</div>
 				<div class="hr"></div>
 				<div class="foot-lnk">
@@ -27,22 +27,18 @@
 			<div class="sign-up-htm">
 				<div class="group">
 					<label for="user" class="label">Username</label>
-					<input id="user" type="text" class="input">
+					<input id="user" #Name type="text" class="input">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Repeat Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<input id="pass" #Pass type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Email Address</label>
-					<input id="pass" type="text" class="input">
+					<input id="pass" #Email type="email" class="input">
 				</div>
 				<div class="group">
-					<input type="submit" class="button" value="Sign Up">
+					<input type="submit" class="button" (click)='signUp(Name.value,Pass.value,Email.value)' value="Sign Up">
 				</div>
 				<div class="hr"></div>
 				<div class="foot-lnk">

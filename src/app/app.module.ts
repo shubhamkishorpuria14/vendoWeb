@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { CustomerComponent } from './customer/customer.component';
 import { LoginComponent } from './login/login.component';
 import { StaticComponentComponent } from './static-component/static-component.component';
+import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
     {
@@ -34,7 +35,8 @@ const routes: Routes = [
     AppComponent,
     CustomerComponent,
     LoginComponent,
-    StaticComponentComponent
+    StaticComponentComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModule } from '@angular/core';
 
+
+import { DataTablesModule } from "angular-datatables";
 import {HttpClient} from '@angular/common/http';
 
 @Component({
@@ -8,12 +10,9 @@ import {HttpClient} from '@angular/common/http';
   templateUrl: './customer.component.html',
   styleUrls: ['./customer.component.css']
 })
+
 export class CustomerComponent implements OnInit {
 
-	title = 'vendoLatest';
-	 sendData(){
-	 	console.log(1);
-	 }
 
 	dataa = [
 	    {name: 'Ajay', email: 'therichpost@gmail.com', website:'therichpost.com'},
