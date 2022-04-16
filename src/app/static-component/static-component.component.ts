@@ -17,10 +17,9 @@ howitworks: string;
 	termAndCondition: string;
 	imprint: string;
 	explanation: string;
-	data: {};
+	data:any = [];
 
 	sendData(){
- 		console.log(this.explanation);
  		let url = 'http://18.191.82.135:3001/staticcontents/saveContent';
  		this.http.post(url, {
  	 	"howItWorks": this.howitworks,
@@ -29,7 +28,7 @@ howitworks: string;
 		"imprint": this.imprint,
 		"explanation": this.explanation
  		}).toPromise().then((data: any) =>{
- 	 	console.log(data);
+ 	 	window.alert('Successfully changed');
  	})
 	 }
 
@@ -38,7 +37,11 @@ howitworks: string;
    		this.http.get(url).subscribe((data)=>{
     		console.warn('get api data',data);
     		this.data = data;
-    		console.log(this.data);
+    		this.contact = this.data.contact;
+    		this.howitworks = this.data.howItWorks;
+    		this.termAndCondition = this.data.termAndConditions;
+    		this.imprint = this.data.imprint;
+    		this.explanation = this.data.explanation;
     	});
 	 }
 

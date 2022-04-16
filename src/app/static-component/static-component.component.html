@@ -8,22 +8,24 @@
   <ul style="list-style: none;">
     <li>
       <textArea  placeholder="How it works" (keyup)="howitworks=$any($event.target).value" name="" rows="5" cols="60" required>
+        {{howitworks}}
       </textArea>
     </li>
     <li>
-      <textArea placeholder="Contact" (keyup)="contact=$any($event.target).value" rows="5" cols="60" required>
+      <textArea placeholder="Contact" (keyup)="contact=$any($event.target).value" rows="5" cols="60" required>{{contact}}
       </textArea>
     </li>
     <li>
-      <textArea placeholder="General terms and conditions" (keyup)="termAndCondition=$any($event.target).value" rows="5" cols="60" required>
+      <textArea placeholder="General terms and conditions" (keyup)="termAndCondition=$any($event.target).value" rows="5" cols="60" required>{{termAndCondition}}
       </textArea>
     </li>
     <li>
-      <textArea placeholder="Imprint" (keyup)="imprint=$any($event.target).value" rows="5" cols="60" required>
+      <textArea placeholder="Imprint" (keyup)="imprint=$any($event.target).value" rows="5" cols="60" required>{{imprint}}
       </textArea>
     </li>
     <li>
       <textArea placeholder="Data short explanation"(keyup)="explanation=$any($event.target).value" rows="5" cols="60" required>
+        {{explanation}}
       </textArea>
   <button style="position: absolute; margin-left: 20px;" (click)='sendData()' type="submit">Safe Change</button>
     </li>

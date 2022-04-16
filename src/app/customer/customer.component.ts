@@ -12,8 +12,6 @@ import {HttpClient} from '@angular/common/http';
 })
 
 export class CustomerComponent implements OnInit {
-
-
 	dataa = [
 	    {name: 'Ajay', email: 'therichpost@gmail.com', website:'therichpost.com'},
 	    {name: 'Jas', email: 'therichpost@gmail.com', website:'therichpost.com'},

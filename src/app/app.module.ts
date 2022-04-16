@@ -43,6 +43,7 @@ const routes: Routes = [
     AppRoutingModule,
     DataTablesModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
