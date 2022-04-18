@@ -11,7 +11,9 @@ import { GetApiService } from '../get-api.service'
 export class LoginComponent implements OnInit {
 
 	signin(email: string,password: any){
-		this.getApi.userAuthentication(email,password).subscribe((data: any)=>{
+		var check = (password ? (email ? true : false) : false);  
+		if(check){
+			this.getApi.userAuthentication(email,password).subscribe((data: any)=>{
 			if(data){
 
 				this.route.navigate(['/staticData']);
@@ -20,18 +22,26 @@ export class LoginComponent implements OnInit {
 			}
 			console.log(data);
 		});
+		} else {
+			window.alert('please fill the content')	
+		}
 		
 	}
-	signUp(username: string,password: any, email: any){
-		this.getApi.signupAuthentication(username,password,email).subscribe((data: any)=>{
-			if(data){
-				this.route.navigate(['/staticData']);
-			}else{
-				alert('Something is wrong');
-				window.alert('Your product has been added to the cart!')
-			}
-			console.log(data);
-		});
+	signUp(username: string,password: any, email: string){
+		var check = (username ? (password ? (email ? true : false) : false): false);  
+		if(check){
+			this.getApi.signupAuthentication(username,password,email).subscribe((data: any)=>{
+				if(data){
+					this.route.navigate(['/staticData']);
+				}else{
+					alert('Something is wrong');
+					window.alert('Your product has been added to the cart!')
+				}
+				console.log(data);
+			});
+		} else{
+			window.alert('please fill the content')		
+		}
 		
 	}
 
