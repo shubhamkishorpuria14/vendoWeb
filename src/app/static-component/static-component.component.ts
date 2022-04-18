@@ -20,7 +20,7 @@ howitworks: string;
 	data:any = [];
 
 	sendData(){
- 		let url = 'http://18.117.241.236:4200/staticcontents/saveContent';
+ 		let url = 'http://18.117.241.236:3001/staticcontents/saveContent';
  		this.http.post(url, {
  	 	"howItWorks": this.howitworks,
 		"contact": this.contact,
@@ -33,15 +33,15 @@ howitworks: string;
 	 }
 
 	 getData(){
-	 	let url = 'http://18.117.241.236:4200/staticcontents/getContents';
+	 	let url = 'http://18.117.241.236:3001/staticcontents/getContents';
    		this.http.get(url).subscribe((data)=>{
     		console.warn('get api data',data);
     		this.data = data;
-    		this.contact = this.data.contact;
-    		this.howitworks = this.data.howItWorks;
-    		this.termAndCondition = this.data.termAndConditions;
-    		this.imprint = this.data.imprint;
-    		this.explanation = this.data.explanation;
+    		this.contact = this.data.result.contact;
+    		this.howitworks = this.data.result.howItWorks;
+    		this.termAndCondition = this.data.result.termAndConditions;
+    		this.imprint = this.data.result.imprint;
+    		this.explanation = this.data.result.explanation;
     	});
 	 }
 
