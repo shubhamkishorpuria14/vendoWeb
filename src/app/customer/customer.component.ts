@@ -24,7 +24,11 @@ export class CustomerComponent implements OnInit {
 	    {name: 'therichpost', email: 'therichpost@gmail.com', website:'therichpost.com'},
 	    {name: 'therichpost', email: 'therichpost@gmail.com', website:'therichpost.com'},
 	 ];
-	 
+	// deleterow(name){
+	//     console.log(name);
+	//     //here do delete event
+	//     const that = this;
+	//  }
     dtOptions: DataTables.Settings = {};
   	constructor(private http: HttpClient){ }
    	ngOnInit() {

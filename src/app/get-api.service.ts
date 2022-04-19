@@ -9,7 +9,7 @@ export class GetApiService {
   constructor(private http: HttpClient) { }
 
   getApi(){
-  	return this.http.get('http://18.117.241.236:3001/users/getAllUsers');
+  	return this.http.get('http://api.vendev.xyz/users/getAllUsers');
   }
 
   userAuthentication(username: string,password: any){
@@ -18,7 +18,7 @@ export class GetApiService {
   		"email": username,
   		"password": password
   	}
-  	return this.http.post('http://18.117.241.236:3001/admin/login',data);
+  	return this.http.post('http://api.vendev.xyz/admin/login',data);
   }
 
   signupAuthentication(name: string,password: any, email: any){
@@ -29,7 +29,7 @@ export class GetApiService {
   		"email": email,
   		"isAdmin": false
   	}
-  	return this.http.post('http://18.117.241.236:3001/admin/add_user',data);
+  	return this.http.post('http://api.vendev.xyz/admin/add_user',data);
   }
 
 }

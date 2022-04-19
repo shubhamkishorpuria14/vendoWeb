@@ -20,7 +20,7 @@ howitworks: string;
 	data:any = [];
 
 	sendData(){
- 		let url = 'http://18.117.241.236:3001/staticcontents/saveContent';
+ 		let url = 'http://api.vendev.xyz/staticcontents/saveContent';
  		this.http.post(url, {
  	 	"howItWorks": this.howitworks,
 		"contact": this.contact,
@@ -33,7 +33,7 @@ howitworks: string;
 	 }
 
 	 getData(){
-	 	let url = 'http://18.117.241.236:3001/staticcontents/getContents';
+	 	let url = 'http://api.vendev.xyz/staticcontents/getContents';
    		this.http.get(url).subscribe((data)=>{
     		console.warn('get api data',data);
     		this.data = data;
